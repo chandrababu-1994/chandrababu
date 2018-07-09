@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+
+<head lang="en">
+    <title>Ico</title>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- styles included -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/auto-complete.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/timeTo.css">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="shortcut" type="imges/png" href="img/favicon.png">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="loader">
+    </div>
+    <header id="home">
+        <nav class="navbar navbar-inverse" id="head-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="nav-brand" href="#"><img src="img/logo.png" alt="logo"> Dream ICO.</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class="scroll" href="#home">HOME </a></li>
+                            <li><a class="scroll" href="#about">ABOUT </a></li>
+                            <li><a class="scroll" href="#services">SERVICES</a></li>
+                            <li><a class="scroll" href="#roadmap">ROADMAP </a></li>
+                            <li><a class="scroll" href="#team">TEAM </a></li>
+                            <li><a class="scroll" href="#contact">CONTACT</a></li>
+                            <li><a class="scroll login" href="#">LOG IN</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Main Section -->
+
+
+
+
+
+
+
+    <footer class="project-services our-team-sections">
+
+    </footer>
+    <!-- scripts included -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.time-to.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/WOW.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/myscripts.js"></script>
+    <script type="text/javascript">
+    // For Owl Carousel
+    $('#owl').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        }
+    });
+    $(window).load(function() {
+        $(".login-form-one input").val("");
+        $(".input-effect input").focusout(function() {
+            if ($(this).val() != "") {
+                $(this).addClass("has-content");
+            } else {
+                $(this).removeClass("has-content");
+            }
+        })
+    });
+
+    $(window).load(function() {
+        $(".login-form-one input").val("");
+
+        $(".input-effect input").focusout(function() {
+            if ($(this).val() != "") {
+                $(this).addClass("has-content");
+            } else {
+                $(this).removeClass("has-content");
+            }
+        })
+    });
+    </script>
+    <script>
+    var deadline = new Date("dec 30, 2019 15:37:25").getTime();
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var t = deadline - now;
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((t % (1000 * 60)) / 1000);
+        document.getElementById("day").innerHTML = days;
+        document.getElementById("hour").innerHTML = hours;
+        document.getElementById("minute").innerHTML = minutes;
+        document.getElementById("second").innerHTML = seconds;
+        if (t < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "TIME UP";
+            document.getElementById("day").innerHTML = '0';
+            document.getElementById("hour").innerHTML = '0';
+            document.getElementById("minute").innerHTML = '0';
+            document.getElementById("second").innerHTML = '0';
+        }
+    }, 1000);
+    </script>
+    <script>
+    window.onscroll = function() { myFunction() };
+    var header = document.getElementById("head-nav");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+    </script>
+</body>
+
+</html>
